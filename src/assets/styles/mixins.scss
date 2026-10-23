@@ -1,0 +1,66 @@
+// =====================================================================
+// 全局 SCSS 混入
+// =====================================================================
+@use 'sass:map';
+@use '@/assets/styles/variables.scss' as v;
+
+/// 卡片容器：统一的白底、圆角与描边
+@mixin panel {
+  padding: v.$gap-md;
+  background: var(--app-color-surface, #fff);
+  border: 1px solid var(--app-color-border, #e5e7eb);
+  border-radius: v.$radius-md;
+}
+
+/// 无描边的分区容器
+@mixin section {
+  padding: v.$gap-md 0;
+}
+
+/// 弹性居中
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/// 单行省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/// 多行省略
+/// @param {Number} $lines 最多显示行数
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+/// 响应式助手
+/// @example @include respond-to('md') { ... }
+@mixin respond-to($name) {
+  $width: map.get(v.$breakpoints, $name);
+
+  @if $width {
+    @media (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @error "未定义的断点：#{$name}";
+  }
+}
+
+/// 隐藏滚动条但保留滚动能力
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "$comment": "运行时配置模板：复制为部署目录下的 config.json 即可在不改构建产物的情况下覆盖配置。只允许以下白名单字段（见 src/config/runtime-config.ts），Nginx 侧建议对该文件设置 Cache-Control: no-cache。",
+  "apiBaseUrl": "/api",
+  "cesiumBaseUrl": "/cesium/"
+}

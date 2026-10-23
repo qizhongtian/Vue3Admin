@@ -1,0 +1,19 @@
+{
+  "ignoreFiles": ["dist/**", "node_modules/**", "public/**"],
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "no-empty-source": null,
+    "declaration-empty-line-before": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z][a-z0-9]*(-[a-z0-9]+)*)?(_[a-z][a-z0-9]*(-[a-z0-9]+)*)?$",
+      {
+        "message": "期望类名使用小写 BEM 命名，例如 base-table__header"
+      }
+    ],
+    "keyframes-name-pattern": null
+  }
+}

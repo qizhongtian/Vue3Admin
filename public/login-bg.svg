@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" role="img" aria-label="背景装饰图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef4ff" />
+      <stop offset="55%" stop-color="#f6f8fc" />
+      <stop offset="100%" stop-color="#e8f1ff" />
+    </linearGradient>
+    <radialGradient id="blob1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2f6fed" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#2f6fed" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="blob2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7aa2ff" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#7aa2ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)" />
+  <circle cx="240" cy="180" r="360" fill="url(#blob1)" />
+  <circle cx="1240" cy="760" r="420" fill="url(#blob2)" />
+  <circle cx="1120" cy="140" r="200" fill="url(#blob1)" opacity="0.7" />
+</svg>

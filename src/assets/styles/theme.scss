@@ -1,0 +1,57 @@
+// =====================================================================
+// 主题 CSS 变量
+// ---
+// 为什么同时存在 Sass 变量与 CSS 变量：
+//  - Sass 变量（variables.scss）用于**编译期**计算（间距、断点、混入）；
+//  - CSS 变量用于**运行时**切换（亮色/暗色），切换主题时无需重新编译样式。
+// ---
+// 业务组件应优先使用这里的 CSS 变量作为颜色来源，
+// 这样暗色模式切换后才能整体生效。
+// =====================================================================
+
+:root {
+  --app-color-primary: #2f6fed;
+  --app-color-primary-hover: #4a82f1;
+  --app-color-primary-suppl: #4a82f1;
+  --app-color-success: #18a058;
+  --app-color-warning: #f0a020;
+  --app-color-error: #d03050;
+  --app-color-info: #2080f0;
+
+  --app-color-text: #1f2329;
+  --app-color-text-secondary: #606a7a;
+  --app-color-text-tertiary: #8a94a6;
+
+  --app-color-surface: #fff;
+  --app-color-surface-secondary: #f5f7fa;
+  --app-color-background: #f2f4f7;
+  --app-color-border: #e5e7eb;
+  --app-color-hover: rgb(47 111 237 / 8%);
+
+  --app-sidebar-background: #fff;
+  --app-header-background: #fff;
+  --app-shadow-card: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+[data-theme='dark'] {
+  --app-color-text: #e6e8eb;
+  --app-color-text-secondary: #a1a8b3;
+  --app-color-text-tertiary: #7d8590;
+
+  --app-color-surface: #1a1c1e;
+  --app-color-surface-secondary: #222427;
+  --app-color-background: #101113;
+  --app-color-border: #2c2f33;
+  --app-color-hover: rgb(255 255 255 / 6%);
+
+  --app-sidebar-background: #16181a;
+  --app-header-background: #16181a;
+  --app-shadow-card: 0 1px 3px rgb(0 0 0 / 40%);
+}
+
+/** 平滑切换主题，避免突变 */
+html {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}

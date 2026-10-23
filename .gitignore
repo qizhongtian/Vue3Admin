@@ -1,0 +1,39 @@
+# 依赖
+node_modules
+.pnpm-store
+
+# 构建产物
+dist
+dist-*
+.eslintcache
+stats.html
+*.tsbuildinfo
+
+# 测试与覆盖率
+coverage
+.vitest-cache
+
+# 日志
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 本地环境变量（仅提交 .env.example）
+.env.local
+.env.*.local
+
+# 编辑器与系统
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

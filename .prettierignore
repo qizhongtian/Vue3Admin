@@ -1,0 +1,25 @@
+# Prettier 不会读取 .gitignore，必须在这里单独声明要跳过的目录，
+# 否则 `pnpm format` 会去改写构建产物与依赖缓存（dist 有几十 MB）。
+
+node_modules
+.pnpm-store
+
+# 构建产物与报告
+dist
+dist-*
+stats.html
+*.tsbuildinfo
+
+# 测试覆盖率
+coverage
+.vitest-cache
+
+# 锁文件：由 pnpm 维护，格式化只会制造噪声
+pnpm-lock.yaml
+
+# 日志
+*.log
+
+# 工具/IDE 的元数据目录，不属于源码
+.workbuddy
+.husky/_
